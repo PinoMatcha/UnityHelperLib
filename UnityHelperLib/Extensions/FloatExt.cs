@@ -1,6 +1,9 @@
 using UnityEngine;
 
 namespace PMP.UnityLib {
+    /// <summary>
+    /// float型の拡張メソッド
+    /// </summary>
     public static class FloatExt {
 
         /// <summary>
@@ -49,9 +52,32 @@ namespace PMP.UnityLib {
         /// <summary>
         /// ターゲット値と等しいかどうかをしきい値で判断して返します。
         /// </summary>
-        /// <returns>bool</returns>
         public static bool SafeEquals (this float self, float obj, float threshold = 0.001f) {
             return Mathf.Abs(self - obj) <= threshold;
+        }
+        
+        /// <summary>
+        /// 値を指定した範囲内に制限して返します。
+        /// </summary>
+        public static float Clamp(this float self, float min, float max) {
+            return Mathf.Clamp(self, min, max);
+        }
+
+        /// <summary>
+        /// 値を０から１の範囲内に制限して返します。
+        /// </summary>
+        public static float Clamp01(this float self) {
+            return Mathf.Clamp01(self);
+        }
+
+        /// <summary>
+        /// ０は０、０より大きければ１、小さければ-１を返します。
+        /// </summary>
+        /// <param name="self"></param>
+        /// <returns></returns>
+        public static int Extremize(this float self) {
+            if(Mathf.Approximately(self, 0.0f)) return 0;
+            return self > 0 ? 1 : -1;
         }
     }
 }
