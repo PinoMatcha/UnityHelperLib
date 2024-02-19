@@ -9,7 +9,7 @@ namespace PMP.UnityLib {
     public static class ArrayExt {
 
         /// <summary>
-        /// ランダムな要素を取得して返します。
+        /// ランダムな要素を取得して返します
         /// </summary>
         public static T GetRandom<T>(this T[] self) {
             if (self.IsNullOrEmpty()) return default(T);
@@ -19,7 +19,7 @@ namespace PMP.UnityLib {
         }
 
         /// <summary>
-        /// Arrayがnullまたは空のときtrueを返します。
+        /// Arrayがnullまたは空のときtrueを返します
         /// </summary>
         public static bool IsNullOrEmpty<T>(this T[] self) {
             return !(self?.Length > 0);
@@ -38,7 +38,7 @@ namespace PMP.UnityLib {
         }
 
         /// <summary>
-        /// Arrayの要素をシャッフルします。
+        /// Arrayの要素をシャッフルします
         /// </summary>
         public static void Shuffle<T>(this T[] self) {
             if (self.IsNullOrEmpty()) return;
@@ -56,7 +56,7 @@ namespace PMP.UnityLib {
         }
 
         /// <summary>
-        /// Array全体の要素の並び順を反転させます。
+        /// Array全体の要素の並び順を反転させます
         /// </summary>
         public static T[] Reverse<T>(this T[] self) {
             Array.Reverse(self);
@@ -64,7 +64,7 @@ namespace PMP.UnityLib {
         }
 
         /// <summary>
-        /// Array指定範囲内の要素の並び順を反転させます。
+        /// Array指定範囲内の要素の並び順を反転させます
         /// </summary>
         public static T[] Reverse<T>(this T[] self, int index, int length) {
             Array.Reverse(self, index, length);

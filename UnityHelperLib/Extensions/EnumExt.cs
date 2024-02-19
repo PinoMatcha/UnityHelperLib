@@ -8,7 +8,7 @@ namespace PMP.UnityLib {
     public static class EnumExt {
 
         /// <summary>
-        /// 前の値に進みます。最小値を超える場合は止まります。
+        /// 前の値に進みます最小値を超える場合は止まります
         /// </summary>
         public static T Prev<T>(this T self) {
             var intValue = Convert.ToInt32(self);
@@ -19,7 +19,7 @@ namespace PMP.UnityLib {
         }
 
         /// <summary>
-        /// 次の値に進みます。最大値を超える場合は止まります。
+        /// 次の値に進みます最大値を超える場合は止まります
         /// </summary>
         public static T Next<T>(this T self) {
             var intValue = Convert.ToInt32(self);
@@ -30,7 +30,7 @@ namespace PMP.UnityLib {
         }
 
         /// <summary>
-        /// 前の値に進みます。最小値を超える場合は最大値に戻ります。
+        /// 前の値に進みます最小値を超える場合は最大値に戻ります
         /// </summary>
         public static T PrevLoop<T>(this T self) {
             var intValue = Convert.ToInt32(self);
@@ -42,7 +42,7 @@ namespace PMP.UnityLib {
         }
 
         /// <summary>
-        /// 次の値に進みます。最大値を超える場合は初期値に戻ります。
+        /// 次の値に進みます最大値を超える場合は初期値に戻ります
         /// </summary>
         public static T NextLoop<T>(this T self) {
             var intValue = Convert.ToInt32(self);

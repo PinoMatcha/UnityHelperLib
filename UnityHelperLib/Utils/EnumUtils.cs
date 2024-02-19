@@ -8,7 +8,7 @@ namespace PMP.UnityLib {
     public static class EnumUtils {
 
         /// <summary>
-        /// int型からEnum型へ変換します。
+        /// int型からEnum型へ変換します
         /// </summary>
         public static TEnum TryParse<TEnum>(int value) {
             if (Enum.IsDefined(typeof(TEnum), value)) {
@@ -19,7 +19,7 @@ namespace PMP.UnityLib {
         }
 
         /// <summary>
-        /// ランダムに値を返します。
+        /// ランダムに値を返します
         /// </summary>
         public static T GetRandom<T>() {
             var random = new Random();
@@ -30,14 +30,14 @@ namespace PMP.UnityLib {
         }
 
         /// <summary>
-        /// Enum型の値の数を返します。
+        /// Enum型の値の数を返します
         /// </summary>
         public static int GetLength<T>() {
             return Enum.GetValues(typeof(T)).Length;
         }
 
         /// <summary>
-        /// 指定された整数値を列挙メンバーに変換して返します。
+        /// 指定された整数値を列挙メンバーに変換して返します
         /// </summary>
         public static T ToObject<T>(int value) {
             return (T)Enum.ToObject(typeof(T), value);

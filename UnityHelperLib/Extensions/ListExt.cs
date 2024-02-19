@@ -8,7 +8,7 @@ namespace PMP.UnityLib {
     public static class ListExt {
 
         /// <summary>
-        /// ランダムな要素を取得して返します。
+        /// ランダムな要素を取得して返します
         /// </summary>
         public static T GetRandom<T>(this List<T> self) {
             if (self.IsNullOrEmpty()) return default(T);
@@ -18,14 +18,14 @@ namespace PMP.UnityLib {
         }
 
         /// <summary>
-        /// Listがnullまたは空のときtrueを返します。
+        /// Listがnullまたは空のときtrueを返します
         /// </summary>
         public static bool IsNullOrEmpty<T>(this List<T> self) {
             return !(self?.Count > 0);
         }
 
         /// <summary>
-        /// Listの要素をシャッフルします。
+        /// Listの要素をシャッフルします
         /// </summary>
         public static void Shuffle<T>(this List<T> self) {
             if (self.IsNullOrEmpty()) return;

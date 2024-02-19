@@ -6,7 +6,7 @@ namespace PMP.UnityLib {
     public static class MeshSurfaceAreaCalculator {
 
         /// <summary>
-        /// メッシュの表面積を計算して返します。
+        /// メッシュの表面積を計算して返します
         /// </summary>
         public static float CalcSurfaceArea(Transform transform, Mesh mesh) {
             // メッシュがない場合は return
