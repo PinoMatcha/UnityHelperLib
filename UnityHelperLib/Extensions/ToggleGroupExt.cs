@@ -11,7 +11,7 @@ namespace PMP.UnityLib {
         private static System.Reflection.FieldInfo _toggleListMember;
 
         /// <summary>
-        /// 全てのトグルを取得して返します
+        /// 全てのトグルを取得して返します。
         /// </summary>
         public static IList<Toggle> GetAllToggles(this ToggleGroup self) {
             if (_toggleListMember == null) {
@@ -23,21 +23,21 @@ namespace PMP.UnityLib {
         }
 
         /// <summary>
-        /// 全てのトグルの数を取得して返します
+        /// 全てのトグルの数を取得して返します。
         /// </summary>
         public static int Count(this ToggleGroup self) {
             return GetAllToggles(self).Count;
         }
 
         /// <summary>
-        /// トグルをインデックスで取得して返します
+        /// トグルをインデックスで取得して返します。
         /// </summary>
         public static Toggle Get(this ToggleGroup self, int index) {
             return GetAllToggles(self)[index];
         }
 
         /// <summary>
-        /// 各トグルにコールバックを登録します
+        /// 各トグルにコールバックを登録します。
         /// </summary>
         public static void ResisterActionEachToggle(this ToggleGroup self, UnityAction<Toggle, bool> action) {
             foreach (var toggle in self.GetAllToggles()) {

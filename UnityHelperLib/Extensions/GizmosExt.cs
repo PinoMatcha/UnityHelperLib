@@ -49,7 +49,7 @@ namespace PMP.UnityLib {
         }
 
         /// <summary>
-        /// UnityEditor.Handlesクラスを使用して塗りつぶし+アウトラインの円を表示します
+        /// UnityEditor.Handlesクラスを使用して塗りつぶし+アウトラインの円を表示します。
         /// </summary>
         public static void DrawSolidCircleWithOutline(Vector2 center, float radius, float thickness = 0.0f, Color faceColor = default(Color), Color outlineColor = default(Color)) {
             var tempColor = Handles.color;
@@ -66,7 +66,7 @@ namespace PMP.UnityLib {
         }
 
         /// <summary>
-        /// UnityEditor.Handlesクラスを使用して、クロス付きの円を表示します
+        /// UnityEditor.Handlesクラスを使用して、クロス付きの円を表示します。
         /// </summary>
         public static void DrawCrossedWireCircle(Vector2 center, float radius, float thickness = 0.0f) {
             Handles.DrawWireDisc(center, Vector3.forward, radius, thickness);
@@ -74,7 +74,7 @@ namespace PMP.UnityLib {
         }
 
         /// <summary>
-        /// UnityEditor.Handlesクラスを使用して、塗りつぶし+クロス+アウトラインの円を表示します
+        /// UnityEditor.Handlesクラスを使用して、塗りつぶし+クロス+アウトラインの円を表示します。
         /// </summary>
         public static void DrawSolidCircleWithCrossedOutline(Vector2 center, float radius, float thickness = 0.0f, Color faceColor = default(Color), Color outlineColor = default(Color)) {
             var tempColor = Handles.color;
@@ -89,7 +89,7 @@ namespace PMP.UnityLib {
         }
 
         /// <summary>
-        /// UnityEditor.Handlesクラスを使用してPhysics2D.CircleCast()を可視化します
+        /// UnityEditor.Handlesクラスを使用してPhysics2D.CircleCast()を可視化します。
         /// </summary>
         public static void DrawCircleCast(RaycastHit2D hitInfo, Vector2 origin, float radius, Vector2 direction, float distance = Mathf.Infinity, float thickness = 0.0f, bool displayHitInfo = true) {
             var tempColor = Handles.color;
@@ -124,7 +124,7 @@ namespace PMP.UnityLib {
         }
 
         /// <summary>
-        /// UnityEditor.Handlesクラスを使用してPhysics2D.Raycast()を可視化します
+        /// UnityEditor.Handlesクラスを使用してPhysics2D.Raycast()を可視化します。
         /// </summary>
         public static void DrawRaycast(RaycastHit2D hitInfo, Vector2 origin, Vector2 direction, float distance = Mathf.Infinity, float thickness = 0.0f, bool displayHitInfo = true) {
             var tempColor = Handles.color;
@@ -141,7 +141,7 @@ namespace PMP.UnityLib {
         }
 
         /// <summary>
-        /// UnityEditor.Handlesクラスを使用してPhysics2D.Linecast()を可視化します
+        /// UnityEditor.Handlesクラスを使用してPhysics2D.Linecast()を可視化します。
         /// </summary>
         public static void DrawLinecast(RaycastHit2D hitInfo, Vector2 start, Vector2 end, float thickness = 0.0f, bool displayHitInfo = true) {
             var tempColor = Handles.color;

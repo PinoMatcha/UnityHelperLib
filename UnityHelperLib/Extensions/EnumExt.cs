@@ -8,48 +8,55 @@ namespace PMP.UnityLib {
     public static class EnumExt {
 
         /// <summary>
-        /// 前の値に進みます最小値を超える場合は止まります
+        /// 前の値を返します。最小値を超える場合は止まります。
         /// </summary>
-        public static T Prev<T>(this T self) {
-            var intValue = Convert.ToInt32(self);
-            var nextValue = Mathf.Max(0, intValue - 1);
-            var enumValue = EnumUtils.ToObject<T>(nextValue);
+        public static Enum Prev<Enum>(this Enum self) {
+            int intValue = Convert.ToInt32(self);
+            int nextValue = Mathf.Max(0, intValue - 1);
+            Enum enumValue = EnumUtils.ToObject<Enum>(nextValue);
 
             return enumValue;
         }
 
         /// <summary>
-        /// 次の値に進みます最大値を超える場合は止まります
+        /// 次の値を返します。最大値を超える場合は止まります。
         /// </summary>
-        public static T Next<T>(this T self) {
-            var intValue = Convert.ToInt32(self);
-            var nextValue = Mathf.Min(EnumUtils.GetLength<T>(), intValue + 1);
-            var enumValue = EnumUtils.ToObject<T>(nextValue);
+        public static Enum Next<Enum>(this Enum self) {
+            int intValue = Convert.ToInt32(self);
+            int nextValue = Mathf.Min(EnumUtils.GetLength<Enum>(), intValue + 1);
+            Enum enumValue = EnumUtils.ToObject<Enum>(nextValue);
 
             return enumValue;
         }
 
         /// <summary>
-        /// 前の値に進みます最小値を超える場合は最大値に戻ります
+        /// 前の値を返します。最小値を超える場合は最大値に戻ります。
         /// </summary>
-        public static T PrevLoop<T>(this T self) {
-            var intValue = Convert.ToInt32(self);
-            var length = EnumUtils.GetLength<T>();
-            var nextValue = (intValue - 1 + length) % length;
-            var enumValue = EnumUtils.ToObject<T>(nextValue);
+        public static Enum PrevLoop<Enum>(this Enum self) {
+            int intValue = Convert.ToInt32(self);
+            int length = EnumUtils.GetLength<Enum>();
+            int nextValue = (intValue - 1 + length) % length;
+            Enum enumValue = EnumUtils.ToObject<Enum>(nextValue);
 
             return enumValue;
         }
 
         /// <summary>
-        /// 次の値に進みます最大値を超える場合は初期値に戻ります
+        /// 次の値を返します。最大値を超える場合は初期値に戻ります。
         /// </summary>
-        public static T NextLoop<T>(this T self) {
-            var intValue = Convert.ToInt32(self);
-            var nextValue = (intValue + 1) % EnumUtils.GetLength<T>();
-            var enumValue = EnumUtils.ToObject<T>(nextValue);
+        public static Enum NextLoop<Enum>(this Enum self) {
+            int intValue = Convert.ToInt32(self);
+            int length = EnumUtils.GetLength<Enum>();
+            int nextValue = (intValue + 1) % length;
+            Enum enumValue = EnumUtils.ToObject<Enum>(nextValue);
 
             return enumValue;
+        }
+
+        public static void Randomize<TEnum>(this TEnum self) {
+            var temp = self;
+            temp = EnumUtils.GetRandom<TEnum>();
+            self = temp;
         }
 
     }
